@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet><!-- servlet 클래스의 정의 등록-->
+        <servlet-name>helloServlet</servlet-name> <!--고유 식별자-> servlet-mapping과 연결시킬-->
+        <servlet-class>org.scoula.basic.HelloServlet</servlet-class> <!--실제 서블릿 자바 클래스의 전체 경로-->
+    </servlet>
+    <servlet-mapping><!--url 요청과 서블릿 이름 연결 -->
+        <servlet-name>helloServlet</servlet-name> <!-- 위의 servlet-name과 동일해야 함. -->
+        <url-pattern>/hello-servlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>my</servlet-name>
+        <servlet-class>org.scoula.basic.MyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>my</servlet-name>
+        <url-pattern>/my</url-pattern>
+    </servlet-mapping>
+</web-app>
